@@ -15,6 +15,7 @@ https://github.com/nelsenpro/fonia.git
 ## [Download](https://github.com/nelsenpro/fonia/archive/refs/heads/main.zip)
 # warna :
 ```
+light-green,green, dark-green, magenta, light-purple, purple, dark-purple, darken, teal, light-blue, blue, dark-blue, yellow, orange, dark-orange, red, dark-red, white, black, gray, cyan, pink
 ```
 # jenis font :
 ```

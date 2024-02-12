@@ -13,6 +13,7 @@ npm i getfonia
 ```
 # jenis font :
 ```
+Courier, Verdana, Helvetica, Times New Roman, Georgia, Trebuchet MS, Garamond, TaHoma, Palatino, Arial Narrow, Brush Script, Calibri, Candara, Didot, Serif, Lucida Bright, Monaco, Open Sans, Optima, Roboto, Arial, Cambria, DM Sans, Geneva, Papyrus, Copperplate.
 ```
 ### Nelsen Niko
 

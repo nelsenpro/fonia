@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>:: fonia - css</title>
+</head>
+<body>
+    <style type="text/css" media="all">
+@import url(fonia.css);
+
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .flex-item-left {
+            /*background-color: #f1f1f1;*/
+            padding: 10px;
+            /*flex: 30%;*/
+            height: 50%;
+        }
+
+        .flex-item-right {
+            /*background-color: dodgerblue;*/
+            padding: 10px;
+            flex: 70%;
+        }
+@media (max-width: 800px) {
+            .flex-item-right, .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+    </style>
+
+
+    <div class="flex-container">
+        <div class="flex-item-left">
+            <h1 class="pink">Heading 1</h1>
+            <h2 class="magenta">Heading 2</h2>
+            <h3 class="yellow">Heading 3</h3>
+            <h4 class="cyan">Heading 4</h4>
+            <h5 class="red">Heading 5</h5>
+            <h6 class="green">Heading 6</h6>
+            <p class="blue">
+                paragraf
+            </p>
+            <small class="orange">small</small>
+
+            <hr />
+            <hr />
+
+            <h1 class="bg-pink white">Heading 1</h1>
+            <h2 class="bg-magenta white">Heading 2</h2>
+            <h3 class="bg-yellow">Heading 3</h3>
+            <h4 class="bg-cyan white">Heading 4</h4>
+            <h5 class="bg-red white">Heading 5</h5>
+            <h6 class="bg-green white">Heading 6</h6>
+            <p class="bg-blue white">
+                paragraf
+            </p>
+            <br />
+            <small class="bg-orange">small</small>
+        </div>
+        <div class="flex-item-right">
+            <p class="arial">
+                font-family: arial;
+            </p>
+            <p class="georgia">
+                font-family: georgia;
+            </p>
+            <p class="verdana">
+                font-family: verdana;
+            </p>
+            <p class="tahoma">
+                font-family: tahoma;
+            </p>
+            <p class="courier">
+                font-family: courier;
+            </p>
+            <p class="garamond">
+                font-family: garamond;
+            </p>
+            <p class="open-sans">
+                font-family: open-sans;
+            </p>
+            <p class="roboto">
+                font-family: roboto;
+            </p>
+              <p class="papyrus">
+                font-family: papyrus;
+            </p>
+            <p class="cursive">
+                font-family: cursive;
+            </p>
+            <p class="monospace">
+                font-family: monospace;
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

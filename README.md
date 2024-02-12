@@ -6,6 +6,7 @@ npm i getfonia
 ```
 ## CDN
 ```
+https://cdn.jsdelivr.net/gh/nelsenpro/fonia/fonia.css
 ```
 ## GIT
 ```html

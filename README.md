@@ -7,7 +7,7 @@ npm i getfonia
 ## CDN
 ```
 ```
-## [Download]()
+## [Download](https://github.com/nelsenpro/fonia/archive/refs/heads/main.zip)
 # warna :
 ```
 ```

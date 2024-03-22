@@ -1,0 +1,44 @@
+{
+    "name": "getfonia",
+    "version": "1.0.2",
+    "description": "Fonia adalah sebuah Framework CSS ringan yang digunakan untuk mengatur tampilan teks, latar belakang, perataan teks, dan jenis font dalam desain web. Dikembangkan oleh Nelsen Niko, Fonia merupakan proyek tambahan dari Framework CSS Framework Indonesia, yang dirancang untuk memberikan penggunaan yang lebih sederhana dan efisien dalam memperindah tampilan halaman web.",
+    "main": "fonia.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nelsenpro/fonia.git"
+    },
+    "keywords": [
+        "fonia",
+        "css-framework",
+        "web-design",
+        "frontend",
+        "responsive",
+        "mobile-first",
+        "lightweight",
+        "minimalistic",
+        "modern",
+        "flexible",
+        "utility-first",
+        "customizable",
+        "scalable",
+        "accessible",
+        "developer-friendly",
+        "cross-browser",
+        "cross-platform",
+        "fonia css",
+        "css",
+        "library css",
+        "fonia framework",
+        "framework css",
+        "nelsen niko"
+    ],
+    "author": "Nelsen Niko",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nelsenpro/fonia/issues"
+    },
+    "homepage": "https://github.com/nelsenpro/fonia#readme"
+}

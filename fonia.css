@@ -1,0 +1,969 @@
+/*
+Fonia adalah sebuah Framework CSS ringan yang digunakan untuk mengatur tampilan teks, latar belakang, perataan teks, dan jenis font dalam desain web. Dikembangkan oleh Nelsen Niko, Fonia merupakan proyek tambahan dari Framework CSS Framework Indonesia, yang dirancang untuk memberikan penggunaan yang lebih sederhana dan efisien dalam memperindah tampilan halaman web.
+*/
+@charset "UTF-8";
+
+:root {
+    /* warna fonts */
+    --light-green: #99b433;
+    --green: #00a300;
+    --dark-green: #1e7145;
+    --magenta: #FF00FF;
+    --light-purple: #9f00a7;
+    --purple: #7e3878;
+    --dark-purple: #603cba;
+    --darken: #1d1d1d;
+    --teal: #20c997;
+    --light-blue: #eff4ff;
+    --blue: #2d89ef;
+    --dark-blue: #2b5797;
+    --yellow: #ffc40d;
+    --orange: #e3a21a;
+    --dark-orange: #da532c;
+    --light-orange: #FFA573;
+    --red: #ee1111;
+    --dark-red: #b91d47;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #808080;
+    --light-gray: #f0f0f0;
+    --cyan: #0dcaf0;
+    --pink: #d63384;
+    --dark: #333;
+    --green-cyan: #33ffaa;
+
+    /* ukuran fonts */
+    --fs8: 8px;
+    --fs10: 10px;
+    --fs12: 12px;
+    --fs14: 14px;
+    --fs16: 16px;
+    --fs18: 18px;
+    --fs20: 20px;
+    --fs22: 22px;
+    --fs24: 24px;
+    --fs26: 26px;
+    --fs28: 28px;
+    --fs30: 30px;
+    --fs32: 32px;
+    --fs34: 34px;
+    --fs36: 36px;
+    --fs38: 38px;
+    --fs40: 40px;
+    --fs42: 42px;
+    --fs44: 44px;
+
+    /* grid */
+    --col-1: 8.33%;
+    --col-2: 16.67%;
+    --col-3: 25.00%;
+    --col-4: 33.33%;
+    --col-5: 41.67%;
+    --col-6: 50.00%;
+    --col-7: 58.33%;
+    --col-8: 66.67%;
+    --col-9: 75.00%;
+    --col-10: 83.33%;
+    --col-11: 91.67%;
+    --col-12: 100.00%;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: auto;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 12px;
+    width: var(--col-12);
+}
+@media only screen and (min-width: 600px) {
+    .col-m-1 {
+        width: var(--col-1);
+    }
+    .col-m-2 {
+        width: var(--col-2);
+    }
+    .col-m-3 {
+        width: var(--col-3);
+    }
+    .col-m-4 {
+        width: var(--col-4);
+    }
+    .col-m-5 {
+        width: var(--col-5);
+    }
+    .col-m-6 {
+        width: var(--col-6);
+    }
+    .col-m-7 {
+        width: var(--col-7);
+    }
+    .col-m-8 {
+        width: var(--col-8);
+    }
+    .col-m-9 {
+        width: var(--col-9);
+    }
+    .col-m-10 {
+        width: var(--col-10);
+    }
+    .col-m-11 {
+        width: var(--col-11);
+    }
+    .col-m-12 {
+        width: var(--col-12);
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: var(--col-1);
+    }
+    .col-2 {
+        width: var(--col-2);
+    }
+    .col-3 {
+        width: var(--col-3);
+    }
+    .col-4 {
+        width: var(--col-4);
+    }
+    .col-5 {
+        width: var(--col-5);
+    }
+    .col-6 {
+        width: var(--col-6);
+    }
+    .col-7 {
+        width: var(--col-7);
+    }
+    .col-8 {
+        width: var(--col-8);
+    }
+    .col-9 {
+        width: var(--col-9);
+    }
+    .col-10 {
+        width: var(--col-10);
+    }
+    .col-11 {
+        width: var(--col-11);
+    }
+    .col-12 {
+        width: var(--col-12);
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: auto;
+    margin: auto;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+    width: var(--col-12);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--col-12);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding-top: 100px;
+    padding-bottom: 90px;
+    /* Adjust to match the height of the footer */
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: var(--col-12);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: var(--col-12);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.font-bold {
+    font-weight: bold;
+}
+.font-lighter {
+    font-style: lighter;
+}
+.font-normal {
+    font-style: normal;
+}
+.font-oblique {
+    font-style: oblique;
+}
+
+.font-italic {
+    font-style: italic;
+}
+.font-underline {
+    text-decoration: underline
+}
+.font-uppercase {
+    text-transform: uppercase;
+}
+.font-line-through {
+    text-decoration: line-through
+}
+.decoration-none {
+    text-decoration: none;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+
+/* font-color */
+.light-green {
+    color: var(--light-green);
+}
+.green {
+    color: var(--green);
+}
+.dark-green {
+    color: var(--dark-green);
+}
+.magenta {
+    color: var(--magenta);
+}
+.light-purple {
+    color: var(--light-purple);
+}
+.purple {
+    color: var(--purple);
+}
+.dark-purple {
+    color: var(--dark-purple);
+}
+.darken {
+    color: var(--darken);
+}
+.teal {
+    color: var(--teal);
+}
+.light-blue {
+    color: var(--light-blue);
+}
+.blue {
+    color: var(--blue);
+}
+.dark-blue {
+    color: var(--dark-blue);
+}
+.yellow {
+    color: var(--yellow);
+}
+.orange {
+    color: var(--orange);
+}
+.dark-orange {
+    color: var(--dark-orange);
+}
+.red {
+    color: var(--red);
+}
+.dark-red {
+    color: var(--dark-red);
+}
+.white {
+    color: var(--white);
+}
+.black {
+    color: var(--black);
+}
+.gray {
+    color: var(--gray);
+}
+.cyan {
+    color: var(--cyan);
+}
+.pink {
+    color: var(--pink);
+}
+
+/* background-color */
+.bg-light-green {
+    background-color: var(--light-green);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-dark-green {
+    background-color: var(--dark-green);
+}
+.bg-magenta {
+    background-color: var(--magenta);
+}
+.bg-light-purple {
+    background-color: var(--light-purple);
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-dark-purple {
+    background-color: var(--dark-purple);
+}
+.bg-darken {
+    background-color: var(--darken);
+}
+.bg-teal {
+    background-color: var(--teal);
+}
+.bg-light-blue {
+    background-color: var(--light-blue);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-orange {
+    background-color: var(--orange);
+}
+.bg-dark-orange {
+    background-color: var(--dark-orange);
+}
+.bg-red {
+    background-color: var(--red);
+}
+.bg-dark-red {
+    background-color: var(--dark-red);
+}
+.bg-white {
+    background-color: var(--white);
+}
+.bg-black {
+    background-color: var(--black);
+}
+.bg-gray {
+    background-color: var(--gray);
+}
+.bg-cyan {
+    background-color: var(--cyan);
+}
+.bg-pink {
+    background-color: var(--pink);
+}
+
+
+/* Generic Font Family */
+.serif {
+    font-family: serif;
+}
+.sans-serif {
+    font-family: sans-serif;
+}
+.monospace {
+    font-family: monospace;
+}
+.cursive {
+    font-family: cursive;
+}
+.fantasy {
+    font-family: fantasy;
+}
+
+/* font-family */
+.arial {
+    font-family: "Arial", sans-serif;
+}
+.georgia {
+    font-family: "Georgia", serif;
+}
+.verdana {
+    font-family: "Verdana", sans-serif;
+}
+.tahoma {
+    font-family: "Tahoma", sans-serif;
+}
+.courier {
+    font-family: "Courier", monospace;
+}
+.garamond {
+    font-family: "Garamond", serif;
+}
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+.helvetica {
+    font-family: 'Helvetica', sans-serif;
+}
+.calibri {
+    font-family: 'Calibri', sans-serif;
+}
+.times {
+    font-family: 'Times New Roman', serif;
+}
+.trebuchet-ms {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.palatino {
+    font-family: 'Palatino', 'Palatino Linotype', serif;
+}
+.arial-narrow {
+    font-family: 'Arial Narrow', sans-serif;
+}
+.brush-script {
+    font-family: 'Brush Script', cursive;
+}
+.candara {
+    font-family: 'Candara', sans-serif;
+}
+.didot {
+    font-family: 'Didot', serif;
+}
+.lucida-bright {
+    font-family: 'Lucida Bright', serif;
+}
+.monaco {
+    font-family: 'Monaco', monospace;
+}
+.optima {
+    font-family: 'Optima', sans-serif;
+}
+.cambria {
+    font-family: 'Cambria', serif;
+}
+.dm-sans {
+    font-family: 'DM Sans', sans-serif;
+}
+.geneva {
+    font-family: 'Geneva', sans-serif;
+}
+.copperplate {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+}
+.papyrus {
+    font-family: 'Papyrus', fantasy;
+}
+
+
+/* font-size */
+.size-32px {
+    font-size: var(--fs32);
+}
+.size-24px {
+    font-size: var(--fs24);
+}
+.size-18px {
+    font-size: var(--fs18);
+}
+.size-16px {
+    font-size: var(--fs16);
+}
+.size-14px {
+    font-size: var(--fs14);
+}
+.size-12px {
+    font-size: var(--fs12);
+}
+
+.btn, .button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 1.5s ease;
+}
+.btn:hover, .button:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-light-green {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.btn-green {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.btn-dark-green {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+.btn-magenta {
+    background-color: var(--magenta);
+    color: var(--white);
+}
+
+.btn-light-purple {
+    background-color: var(--light-purple);
+    color: var(--white);
+}
+
+.btn-purple {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.btn-dark-purple {
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.btn-darken {
+    background-color: var(--darken);
+    color: var(--white);
+}
+
+.btn-teal {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+.btn-light-blue {
+    background-color: var(--light-blue);
+    color: var(--black);
+}
+
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.btn-dark-blue {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.btn-yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-dark-orange {
+    background-color: var(--dark-orange);
+    color: var(--white);
+}
+
+.btn-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.btn-dark-red {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.btn-black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.btn-gray {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.btn-cyan {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.btn-pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+    background-color: #fff;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e5e5e5;
+}
+
+.blue-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blue-table th,
+.blue-table td {
+    padding: 12px;
+}
+
+.blue-table th {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: left;
+}
+
+.blue-table tr:nth-child(even) {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.blue-table tr:nth-child(odd) {
+    background-color: var(--light-blue);
+    color: var(--black);
+}
+
+.green-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.green-table th,
+.green-table td {
+    padding: 12px;
+}
+
+.green-table th {
+    background-color: var(--dark-green);
+    color: var(--white);
+    text-align: left;
+}
+
+.green-table tr:nth-child(even) {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.green-table tr:nth-child(odd) {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.purple-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.purple-table th,
+.purple-table td {
+    padding: 12px;
+}
+
+.purple-table th {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    text-align: left;
+}
+
+.purple-table tr:nth-child(even) {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.purple-table tr:nth-child(odd) {
+    background-color: var(--light-purple);
+    color: var(--white);
+}
+
+.red-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.red-table th,
+.red-table td {
+    padding: 12px;
+}
+
+.red-table th {
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: left;
+}
+
+.red-table tr:nth-child(even) {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.red-table tr:nth-child(odd) {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+.yellow-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.yellow-table th,
+.yellow-table td {
+    padding: 12px;
+}
+
+.yellow-table th {
+    background-color: var(--light-orange);
+    color: var(--black);
+    text-align: left;
+}
+
+.yellow-table tr:nth-child(even) {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.yellow-table tr:nth-child(odd) {
+    background-color: var(--dark-orange);
+    color: var(--white);
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s ease-out;
+    transform: translateY(-10px);
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tooltip text position: top */
+.tooltip[data-position="top"] .tooltiptext {
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Tooltip text position: bottom */
+.tooltip[data-position="bottom"] .tooltiptext {
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* Tooltip text position: left */
+.tooltip[data-position="left"] .tooltiptext {
+    top: 50%;
+    right: 125%;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+/* Tooltip text position: right */
+.tooltip[data-position="right"] .tooltiptext {
+    top: 50%;
+    left: 125%;
+    transform: translateY(-50%) translateX(10px);
+}
+
+/* Tooltip text position: center */
+.tooltip[data-position="center"] .tooltiptext {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Default style */
+.tooltip .tooltiptext.default {
+    background-color: #333;
+}
+
+/* Rounded style */
+.tooltip .tooltiptext.rounded {
+    border-radius: 20px;
+}
+
+/* Shadow style */
+.tooltip .tooltiptext.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Border style */
+.tooltip .tooltiptext.border {
+    border: 2px solid #fff;
+}
+
+/* Gradient style */
+.tooltip .tooltiptext.gradient {
+    background-image: linear-gradient(to bottom, #4CAF50, #2196F3);
+}
+
+/* Tooltip icon */
+.tooltip .tooltip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('tooltip-icon.png');
+    /* Replace with your icon */
+    background-size: cover;
+    margin-right: 5px;
+}

@@ -8,11 +8,11 @@ npm i getfonia
 ```
 ## CDN
 CSS
-```
+```html
 https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/css/fonia-1.0.3.css
 ```
 JS
-```
+```html
 https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/js/fonia-1.0.3.js
 ```
 ## GIT

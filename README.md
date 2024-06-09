@@ -7,13 +7,9 @@ Fonia adalah Framework CSS atau kumpulan pustaka CSS ringan dan kecil yang digun
 npm i getfonia
 ```
 ## CDN
-Version 1.0.2
-```
-https://cdn.jsdelivr.net/gh/nelsenpro/fonia/fonia.css
-```
 Version 1.0.3
 ```
-https://cdn.jsdelivr.net/gh/nelsenpro/fonia/fonia.1.0.3.css
+https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/css/fonia.1.0.3.css
 ```
 ## GIT
 ```html

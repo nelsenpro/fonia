@@ -2,7 +2,7 @@
     "name": "getfonia",
     "version": "1.0.3",
     "description": "Fonia adalah sebuah Framework CSS ringan yang digunakan untuk mengatur tampilan teks, latar belakang, perataan teks, dan jenis font dalam desain web. Dikembangkan oleh Nelsen Niko, Fonia merupakan proyek tambahan dari Framework CSS Framework Indonesia, yang dirancang untuk memberikan penggunaan yang lebih sederhana dan efisien dalam memperindah tampilan halaman web.",
-    "main": "https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/js/fonia.1.0.3.js",
+    "main": "https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/js/fonia-1.0.3.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

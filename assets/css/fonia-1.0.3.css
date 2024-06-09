@@ -105,9 +105,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Fonia, 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', system-ui, Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, Verdana, Georgia, 'Trebuchet MS', Tahoma, 'Lucida Sans', 'Palatino Linotype';
+    font-family: Helvetica, Arial, Fonia, 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', system-ui, sans-serif, 'Times New Roman', Times, serif, Verdana, Georgia, 'Trebuchet MS', Tahoma, 'Lucida Sans', 'Palatino Linotype';
 }
-.fonia {
+.fonia, .Fonia, .FONIA {
       font-family: Fonia, sans-serif;
 }
 

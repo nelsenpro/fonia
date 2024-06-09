@@ -9,11 +9,11 @@ npm i getfonia
 ## CDN
 CSS
 ```
-https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/css/fonia.1.0.3.css
+https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/css/fonia-1.0.3.css
 ```
 JS
 ```
-https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/js/fonia.1.0.3.js
+https://cdn.jsdelivr.net/gh/nelsenpro/fonia/assets/js/fonia-1.0.3.js
 ```
 ## GIT
 ```html

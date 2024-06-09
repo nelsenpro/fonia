@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tanpa CSS</title>
+    <!-- Import Fonia script -->
+    <link rel="stylesheet" href="../assets/css/fonia-1.0.3.css" type="text/css" media="all" />
+    <script src="../assets/js/fonia-1.0.3.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="h1"></h1>
+
+        <button id="button">button using style()</button>
+        <button id="button2">button using css()</button>
+    </header>
+
+    <div id="div1">
+        <h2>Div 1</h2>
+        <p>
+            This is the content of div 1.
+        </p>
+    </div>
+
+    <div id="div2">
+        <h2>Div 2</h2>
+        <p>
+            This is the content of div 2.
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>
+            footer
+        </p>
+    </footer>
+
+    <script>
+        ready(function() {
+            let fonias = fonia('body');
+
+            // Apply initial styles
+            fonias.style({
+                'body': {
+                    fontFamily: 'Arial, sans-serif',
+                    backgroundColor: 'var(--light-gray)',
+                    color: 'var(--dark)',
+                    textAlign: 'center'
+                },
+                '#header': {
+                    backgroundColor: 'var(--dark)',
+                    color: 'var(--white)',
+                    padding: '10px',
+                    marginBottom: '20px'
+                },
+                '#div1, #div2': {
+                    padding: '15px',
+                    margin: '15px',
+                    border: '1px solid #ccc'
+                },
+                'h1, h2': {
+                    fontFamily: 'Verdana, Geneva, sans-serif',
+                    marginBottom: '10px'
+                },
+                'p': {
+                    lineHeight: '1.5',
+                    fontSize: '16px'
+                },
+                '#button': {
+                    backgroundColor: 'var(--blue)',
+                    color: 'white',
+                    borderRadius: '5px',
+                    padding: '10px 20px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    marginBottom: '20px'
+                },
+                '.footer': {
+                    backgroundColor: 'var(--dark)',
+                    color: 'var(--green-cyan)',
+                    padding: '10px',
+                    textAlign: 'center',
+                    position: 'fixed',
+                    left: '0',
+                    bottom: '0',
+                    width: '100%',
+                    zIndex: '9999'
+                }
+            });
+
+            $('#button2').css({
+                backgroundColor: 'var(--green)',
+                color: 'var(--white)',
+                borderRadius: '5px',
+                padding: '10px 20px',
+                border: 'none',
+                cursor: 'pointer',
+                marginBottom: '20px'
+            })
+
+            // Add event listener to the button
+            fonias.on("click", function(event) {
+                if (event.target.id === "button") {
+                    alert("Button clicked!");
+                }
+            });
+
+            // Apply responsive styles based on screen width
+            window.addEventListener('resize',
+                function() {
+                    if (window.innerWidth <= 600) {
+                        // Apply styles for smaller screens
+                        fonias.style({
+                            '#button': {
+                                padding: '8px 16px',
+                                marginBottom: '15px'
+                            }
+                        });
+                    } else {
+                        // Apply styles for larger screens
+                        fonias.style({
+                            '#button': {
+                                padding: '10px 20px',
+                                marginBottom: '20px'
+                            }
+                        });
+                    }
+                });
+        });
+        
+        let fonias = fonia('body');
+        fonias.typeText("h1", "Welcome To Fonia", 150);
+    </script>
+</body>
+</html>

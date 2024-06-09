@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonia Example</title>
+    <link rel="stylesheet" href="../assets/css/fonia-1.0.3.css" type="text/css" media="all" />
+</head>
+<body>
+    <h1>Random Colors and TypeText</h1>
+    <div class="box" id="box1">Box 1</div>
+    <div class="box circle" id="box2">.</div>
+
+    <!-- Display the random color code for box 1 -->
+    <div id="colorOutputBox1"></div>
+
+    <!-- Display the random color code for box 2 -->
+    <div id="colorOutputBox2"></div>
+
+    <!-- Import Fonia script -->
+    <script src="../assets/js/fonia-1.0.3.js"></script>
+
+    <script>
+        // Wait for the DOM to be fully loaded
+        ready(function() {
+            // Initialize Fonia with the selector '.box'
+            let fonias = fonia('.box');
+
+            // Generate random color hex for box 1
+            let randomColorBox1 = fonias.RandomColor();
+            fonias.changeBackgroundColor('box1', randomColorBox1);
+            // Display the random color code for box 1
+            let colorOutputBox1 = document.getElementById('colorOutputBox1');
+            colorOutputBox1.textContent = 'Box Color Code: ' + randomColorBox1;
+
+            // Generate random color hex for box 2
+            let randomColorBox2 = fonias.RandomColor();
+            fonias.changeBackgroundColor('box2', randomColorBox2);
+            // Display the random color code for box 2
+            let colorOutputBox2 = document.getElementById('colorOutputBox2');
+            colorOutputBox2.textContent = 'Circle Color Code: ' + randomColorBox2;
+
+            // Type text inside box 1 with a certain speed
+            fonias.typeText('box1', 'Hello, Fonia!', 100);
+
+            // Add event listener using Fonia
+            fonias.on('click', function() {
+                alert('Box clicked!');
+            });
+        });
+    </script>
+    
+    <style type="text/css" media="all">
+    #box1 {
+        padding: 6px;
+    }
+       #box2 {
+           color: white;
+       } 
+    </style>
+</body>
+</html>

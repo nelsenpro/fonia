@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fonia Example</title>
+    <!-- Link to Fonia CSS -->
     <link rel="stylesheet" href="../assets/css/fonia-1.0.4.css" type="text/css" media="all" />
 </head>
 <body>
-    <h1>Random Colors and TypeText</h1>
+    <h1>Menciptakan Warna Sendiri</h1>
     <div class="box" id="box1">Box 1</div>
     <div class="box circle" id="box2">.</div>
-
-    <!-- Display the random color code for box 1 -->
-    <div id="colorOutputBox1"></div>
-
-    <!-- Display the random color code for box 2 -->
-    <div id="colorOutputBox2"></div>
+    <button id="changeColorButton" class="btn btn-red">Ubah Warna</button> <!-- Changed button type to button and added an id -->
 
     <!-- Import Fonia script -->
     <script src="../assets/js/fonia-1.0.4.js"></script>
@@ -24,24 +20,25 @@
         // Wait for the DOM to be fully loaded
         ready(function() {
             // Initialize Fonia with the selector '.box'
-            let fonias = fonia('.box');
+            const fonias = fonia('.box');
 
-            // Generate random color hex for box 1
-            let randomColorBox1 = fonias.RandomColor();
+            // Function to change color on button click
+            document.getElementById('changeColorButton').addEventListener('click', function() {
+                // Generate random color hex for box 1
+                let randomColorBox1 = fonias.randomColor();
+                fonias.changeBackgroundColor('box1', randomColorBox1);
+
+                // Generate random color hex for box 2
+                let randomColorBox2 = fonias.randomColor();
+                fonias.changeBackgroundColor('box2', randomColorBox2);
+            });
+
+            // Initial color change on page load
+            let randomColorBox1 = fonias.randomColor();
             fonias.changeBackgroundColor('box1', randomColorBox1);
-            // Display the random color code for box 1
-            let colorOutputBox1 = document.getElementById('colorOutputBox1');
-            colorOutputBox1.textContent = 'Box Color Code: ' + randomColorBox1;
 
-            // Generate random color hex for box 2
-            let randomColorBox2 = fonias.RandomColor();
+            let randomColorBox2 = fonias.randomColor();
             fonias.changeBackgroundColor('box2', randomColorBox2);
-            // Display the random color code for box 2
-            let colorOutputBox2 = document.getElementById('colorOutputBox2');
-            colorOutputBox2.textContent = 'Circle Color Code: ' + randomColorBox2;
-
-            // Type text inside box 1 with a certain speed
-            fonias.typeText('box1', 'Hello, Fonia!', 100);
 
             // Add event listener using Fonia
             fonias.on('click', function() {
@@ -50,13 +47,27 @@
         });
     </script>
     
-    <style type="text/css" media="all">
-    #box1 {
-        padding: 6px;
-    }
-       #box2 {
-           color: white;
-       } 
+    <style>
+        /* Additional styles for demonstration */
+        .box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            background-color: lightblue; /* Default background color */
+            color: black; /* Default text color */
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: orange; /* Default background color */
+            color: white; /* Default text color */
+        }
     </style>
 </body>
 </html>

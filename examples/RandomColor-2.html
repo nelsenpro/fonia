@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using fonia.js</title>
+     <!-- Link to Fonia CSS -->
+    <link rel="stylesheet" href="../assets/css/fonia-1.0.4.css" type="text/css" media="all" />
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: yellow; /* Example highlight color */
+        }
+    </style>
+    <!-- Import Fonia script -->
+    <script src="../assets/js/fonia-1.0.4.js"></script>
+    <script>
+        // Document ready function
+        ready(function() {
+            // Initialize fonia using $
+            const $ = fonia;
+
+            // Example usage
+            $('#changeStyleButton').on('click', function() {
+                $('.box').toggleClass('highlight');
+            });
+
+            $('.box').addHoverEffect('box', 'lightblue');
+
+            $('#randomColorButton').on('click', function() {
+                $('.box').randomColor();
+            });
+
+            // Example to change text content inside boxes
+            $('#changeTextButton').on('click', function() {
+                document.getElementById('box1').textContent = 'Hello';
+                document.getElementById('box2').textContent = 'World';
+                document.getElementById('box3').textContent = '123';
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="box" id="box1">Color Code</div>
+<div class="box" id="box2">Color Code</div>
+<div class="box" id="box3">Color Code</div>
+
+<button id="changeStyleButton" class="btn btn-red">Change Styles</button>
+<button id="randomColorButton" class="btn btn-green">Random Color</button>
+<button id="changeTextButton" class="btn btn-blue">Change Text</button>
+
+</body>
+</html>

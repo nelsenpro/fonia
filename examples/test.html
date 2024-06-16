@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonia.js Example</title>
+     <!-- Import Fonia css -->
+     <link rel="stylesheet" href="../assets/css/fonia-1.0.4.css" type="text/css" media="all" />
+     <!-- Import Fonia script -->
+    <script src="../assets/js/fonia-1.0.4.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: coral;
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="circle">Box 2</div>
+    <div class="triangle">Box 3</div>
+
+    <button id="addClassBtn" class="btn">Add Class</button>
+    <button id="removeClassBtn" class="btn">Remove Class</button>
+    <button id="toggleClassBtn" class="btn">Toggle Class</button>
+    <button id="addEventBtn" class="btn">Add Event Listener</button>
+    <button id="removeEventBtn" class="btn">Remove Event Listener</button>
+
+    <script>
+        ready(function() {
+            const boxes = fonia('.box, .circle, .triangle'); 
+             // Select all elements with class 'box'
+
+            // Example: Add Class
+            document.getElementById('addClassBtn').addEventListener('click', function() {
+                boxes.addClass('highlight');
+            });
+
+            // Example: Remove Class
+            document.getElementById('removeClassBtn').addEventListener('click', function() {
+                boxes.removeClass('highlight');
+            });
+
+            // Example: Toggle Class
+            document.getElementById('toggleClassBtn').addEventListener('click', function() {
+                boxes.toggleClass('rotate');
+            });
+
+            // Example: Add Event Listener
+            function clickHandler() {
+                console.log('Box clicked!');
+            }
+
+            document.getElementById('addEventBtn').addEventListener('click', function() {
+                boxes.on('click', clickHandler);
+            });
+
+            // Example: Remove Event Listener
+            document.getElementById('removeEventBtn').addEventListener('click', function() {
+                boxes.off('click', clickHandler);
+            });
+        });
+    </script>
+</body>
+</html>

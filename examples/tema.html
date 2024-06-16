@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Theme Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 20px;
+        }
+
+        .theme-light {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .theme-dark {
+            background-color: #333;
+            color: #fff;
+        }
+        .theme-dark h1 {
+            color: #3fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="body">
+
+    <div class="container">
+        <h1>Toggle Theme Example</h1>
+        <p>
+            This is a paragraph. Click the button to toggle between light and dark themes.
+        </p>
+        <button id="theme-toggle-btn">Toggle Theme</button>
+    </div>
+
+     <!-- Import Fonia script -->
+    <script src="../assets/js/fonia-1.0.4.js"></script>
+    
+    <script>
+
+        // Callback function to execute when DOM is ready
+        ready(function() {
+            // Create instance of fonia using body selector
+            const $ = fonia('body');
+
+            // Add event listener to theme toggle button
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            themeToggleBtn.addEventListener('click', function() {
+                // Toggle between theme-light and theme-dark classes on body
+                $.toggleClass('theme-light').toggleClass('theme-dark');
+            });
+        });
+    </script>
+
+</body>
+</html>
